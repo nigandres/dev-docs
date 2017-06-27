@@ -41,8 +41,17 @@ http://nombre_proyecto
     - Agregar `public $timestamps = false;`
     - Agregar `protected $fillable = ['carrera];`
 
+## Crear Seeder para tabla carreras
 
-## Referencias
+Laravel incluye un método para agregar registros (seeding) a las tablas usando la clase "seed" (semilla).
+
+- Crear seeder: `php artisan make:seeder CarrerasTableSeeder` con lo que se creará el archivo: database/seeds/CarrerasTableSeeder.php
+- Agregar 5 carreras utilizando el seeder. [Documentación para escribir Seeders](https://laravel.com/docs/5.4/seeding#writing-seeders)
+- Una vez creado el seeder, ejecutar: `composer dump-autoload`
+- Ejecutar seeder: `php artisan db:seed --class=CarrerasTableSeeder`
+- Verificar si las carreras se agregaron a la tabla carreras
+
+## Código fuente
 
 [Repositiorio de proyecto en GitHub](https://github.com/samuelmg/social)
 
